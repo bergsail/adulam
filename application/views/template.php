@@ -29,12 +29,68 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
+  <style type="text/css">
+
+    h2 {
+      text-align: center;
+    }
+
+    #navigador {
+      background-color: #000;
+    }
+    .nav-container nav{
+      background-color: #ebebeb;
+      /*position: relative;*/
+    }
+    .nav-container li {
+      display: inline-block;
+      text-decoration: none;
+
+    }
+    .nav-container li a {
+      text-decoration: none;
+      font-size: 1em;
+      color: #2c2e24;
+      font-weight: bold;
+      display: inline-block;
+      width: 8em; text-align: center;
+      padding: .5em 1em;
+      
+      -webkit-border-radius: 1px;
+      -moz-border-radius: 1px;
+      border-radius: 1px;
+    }
+    .nav-container ul {
+      text-align: center;
+    }
+
+    .sticky {
+      position: fixed;
+      top: 15px;
+      background-color: #ebebeb;
+      height: 40px;
+      width: 100%;
+      z-index: 500;
+      animation:thedrop 1s 1;
+      -moz-animation:thedrop 1s 1;
+      -webkit-animation:thedrop 1s 1;
+    }
+    .sticky .nav-above {
+      position: absolute;
+      top:-15px;
+      left:1em;
+      right:1em;
+      height:15px;
+    }
+
+  </style>
+
 </head>
 <body>
 
   <!-- Nav Bar -->
 
-  <div class="row">
+<!--   <div class="row">
     <div class="twelve columns">
       <ul class="nav-bar">
         <li><a href="#">Link 1</a></li>
@@ -46,7 +102,23 @@
       <h1>Blog <small>This is my blog. It's awesome.</small>
       <hr />
     </div>
+  </div> -->
+  <div class="row"><h2>Main Title</h2></div>
+
+  <div id="navigator">
+    <div class="row nav-container">
+      <nav>
+        <ul>
+          <li><a href="#chapter-1" class="selected">Chapter I</a></li>
+          <li><a href="#chapter-2">Chapter II</a></li>
+          <li><a href="#chapter-3">Chapter III</a></li>
+          <li><a href="#chapter-4">Chapter IV</a></li>
+          <li><a href="#chapter-5">Chapter V</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
+  
 
   <!-- End Nav -->
 
@@ -160,16 +232,12 @@
   <!-- Included JS Files (Compressed) -->
   <script src="<?php echo base_url() ?>resources/js/jquery.js"></script>
   <script src="<?php echo base_url() ?>resources/js/foundation.min.js"></script>
+  <script src="<?php echo base_url() ?>resources/js/jquery.scrollTo-1.4.2-min.js" type="text/javascript"></script>
+  <script src="<?php echo base_url() ?>resources/js/waypoints.min.js" type="text/javascript"></script>
+  <script src="<?php echo base_url() ?>resources/js/navbar.js" type="text/javascript"></script>
   
   <!-- Initialize JS Plugins -->
   <script src="<?php echo base_url() ?>resources/js/app.js"></script>
-
-  
-    <script>
-    $(window).load(function(){
-      $("#featured").orbit();
-    });
-    </script> 
   
 </body>
 </html>

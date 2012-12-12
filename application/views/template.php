@@ -29,32 +29,6 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <style type="text/css">
-
-    h2 {
-      text-align: center;
-    }
-
-    .navigator {
-      background-color: #000;
-      width: 100%
-    }
-
-    .sticky {
-      position: fixed;
-      z-index: 500;
-      animation:thedrop 1s 1;
-      -moz-animation:thedrop 1s 1;
-      -webkit-animation:thedrop 1s 1;
-    }
-
-    #main_menu {
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-
-  </style>
-
 </head>
 <body>
 
@@ -65,12 +39,12 @@
   <div class="navigator">
     <div class="row nav-container">
       <nav>
-        <ul class="nav-bar" id="main_menu">
-          <li><a href="#chapter-1" class="selected">Chapter I</a></li>
-          <li><a href="#chapter-2">Chapter II</a></li>
-          <li><a href="#chapter-3">Chapter III</a></li>
-          <li><a href="#chapter-4">Chapter IV</a></li>
-          <li><a href="#chapter-5">Chapter V</a></li>
+        <ul class="" id="main_menu">
+          <li><a href="#adulam" class="selected">Adulam</a></li>
+          <li><a href="#discografy">Discografy</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#networks">Networks</a></li>
+          <li><a href="#shop">Shop</a></li>
         </ul>
       </nav>
     </div>

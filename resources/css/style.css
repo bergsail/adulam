@@ -1,0 +1,56 @@
+@font-face {
+    font-family: Requiem;
+    src: url(http://localhost/adulam/resources/css/Requiem.ttf);
+    font-weight:400;
+}
+
+@font-face {
+    font-family: TrajanProRegular;
+    src: url(http://localhost/adulam/resources/css/TrajanPro-Regular.otf);
+    font-weight:400;
+}
+
+body {
+  font-family: TrajanProRegular;
+}
+
+.navigator {
+  background-color: #000;
+  width: 100%
+}
+
+.sticky {
+  position: fixed;
+  z-index: 500;
+  animation:thedrop 1s 1;
+  -moz-animation:thedrop 1s 1;
+  -webkit-animation:thedrop 1s 1;
+}
+
+#main_menu {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.nav-container nav {
+  margin: 0 5px 0 5px;
+}
+
+.nav-container nav ul {
+  text-align: center;
+}
+
+.nav-container nav li {
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 1em 5px 1em;
+}
+
+.nav-container nav li a {
+  font-family: Requiem;
+  text-transform: lowercase;
+  font-size: 2em;
+  color: #c6cdd5;
+  text-shadow: 1px 1px 1px #ab7a5a;
+  filter: dropshadow(color=#ab7a5a, offx=1, offy=1);
+}

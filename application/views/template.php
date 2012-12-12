@@ -35,52 +35,22 @@
       text-align: center;
     }
 
-    #navigador {
+    .navigator {
       background-color: #000;
-    }
-    .nav-container nav{
-      background-color: #ebebeb;
-      /*position: relative;*/
-    }
-    .nav-container li {
-      display: inline-block;
-      text-decoration: none;
-
-    }
-    .nav-container li a {
-      text-decoration: none;
-      font-size: 1em;
-      color: #2c2e24;
-      font-weight: bold;
-      display: inline-block;
-      width: 8em; text-align: center;
-      padding: .5em 1em;
-      
-      -webkit-border-radius: 1px;
-      -moz-border-radius: 1px;
-      border-radius: 1px;
-    }
-    .nav-container ul {
-      text-align: center;
+      width: 100%
     }
 
     .sticky {
       position: fixed;
-      top: 15px;
-      background-color: #ebebeb;
-      height: 40px;
-      width: 100%;
       z-index: 500;
       animation:thedrop 1s 1;
       -moz-animation:thedrop 1s 1;
       -webkit-animation:thedrop 1s 1;
     }
-    .sticky .nav-above {
-      position: absolute;
-      top:-15px;
-      left:1em;
-      right:1em;
-      height:15px;
+
+    #main_menu {
+      margin-top: 0px;
+      margin-bottom: 0px;
     }
 
   </style>
@@ -90,25 +60,12 @@
 
   <!-- Nav Bar -->
 
-<!--   <div class="row">
-    <div class="twelve columns">
-      <ul class="nav-bar">
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-        <li><a href="#">Link 4</a></li>
-      </ul>
-
-      <h1>Blog <small>This is my blog. It's awesome.</small>
-      <hr />
-    </div>
-  </div> -->
   <div class="row"><h2>Main Title</h2></div>
 
-  <div id="navigator">
+  <div class="navigator">
     <div class="row nav-container">
       <nav>
-        <ul>
+        <ul class="nav-bar" id="main_menu">
           <li><a href="#chapter-1" class="selected">Chapter I</a></li>
           <li><a href="#chapter-2">Chapter II</a></li>
           <li><a href="#chapter-3">Chapter III</a></li>
@@ -118,7 +75,7 @@
       </nav>
     </div>
   </div>
-  
+    
 
   <!-- End Nav -->
 
@@ -238,6 +195,19 @@
   
   <!-- Initialize JS Plugins -->
   <script src="<?php echo base_url() ?>resources/js/app.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    var bar = $('#headerSlideContainer');
+    var top = bar.css('top');
+    $(window).scroll(function() {
+      if($(this).scrollTop() > 400) {
+        bar.stop().animate({'top' : '-22px'}, 500);
+      } else {
+        bar.stop().animate({'top' : top}, 100);
+      }
+    });
+  });
+</script>
   
 </body>
 </html>

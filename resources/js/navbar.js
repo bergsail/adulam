@@ -1,7 +1,8 @@
 $(function() {
 
+	// Do our DOM lookups beforehand
 	var nav_container = $(".nav-container");
-	var nav = $("nav");
+	var nav = $(".navigator");  //content animation layer 
 	
 	var top_spacing = 0;
 	var waypoint_offset = 50;
@@ -13,7 +14,6 @@ $(function() {
 			
 				nav_container.css({ 'height':nav.outerHeight() });		
 				nav.stop().addClass("sticky").css("top",-nav.outerHeight()).animate({"top":top_spacing});
-
 				
 			} else {
 			
@@ -36,33 +36,11 @@ $(function() {
 		
 			var active_section;
 			active_section = $(this);
-
-			if (direction === "UP") active_section = active_section.prev();
+			if (direction === "up") active_section = active_section.prev();
 
 			var active_link = $('nav a[href="#' + active_section.attr("id") + '"]');
-			//navigation_links.removeClass("selected");
+			navigation_links.removeClass("selected");
 			active_link.addClass("selected");
-
-			// if($("nav a").attr("chapter") < active_link){
-			// 	$(this).removeClass("selected");
-			// }
-
-			// if(direction === "up"){
-			// 	active_section = active_section.prev();
-			// 	active_link.removeClass("selected");
-			// }
-
-			//var test = $(active_link).attr("chapter");
-			//alert(test);
-
-			// if (direction === "up"){
-			// 	active_section = active_section.prev();
-			// 	var active_link = $('nav a[href="#' + active_section.attr("id") + '"]');
-			// 	active_link.addClass("selected");
-			// }else{
-			// 	navigation_links.removeClass("selected");
-			// }
-
 
 		},
 		offset: '25%'

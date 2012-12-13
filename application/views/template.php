@@ -31,32 +31,38 @@
 
 </head>
 <body>
-
-  <!-- Nav Bar -->
-
-  <div class="row"><h2>Main Title</h2></div>
+  
+  <header>
+    <div class="row" id="logo"><img src="<?php echo base_url() ?>resources/images/adulam_logo.png"></div>
+  </header>
 
   <div class="navigator">
     <div class="row nav-container">
       <nav>
         <ul class="" id="main_menu">
           <li><a href="#adulam" class="selected">Adulam</a></li>
-          <li><a href="#discografy">Discografy</a></li>
+          <li><a href="#discografy">Discography</a></li>
           <li><a href="#news">News</a></li>
-          <li><a href="#networks">Networks</a></li>
+          <li><a href="#media">Media</a></li>
           <li><a href="#shop">Shop</a></li>
         </ul>
       </nav>
     </div>
   </div>
-    
-
-  <!-- End Nav -->
-
-
-  <!-- Main Page Content and Sidebar -->
 
   <div class="row">
+
+    <section id="media">
+        <div id="video_slider">
+          <div class="media-video"><iframe src="http://www.youtube.com/embed/dRKIQFib1XY" frameborder="0" allowfullscreen></iframe></div>
+          <div class="media-video"><iframe src="http://www.youtube.com/embed/mEdtVQAmWII" frameborder="0" allowfullscreen></iframe></div>
+          <div class="media-video"><iframe src="http://www.youtube.com/embed/rEH03cQBEEM" frameborder="0" allowfullscreen></iframe></div>
+        </div>
+        
+        <a id="prev2" class="prev" href="#">&lt;</a>
+        <a id="next2" class="next" href="#">&gt;</a>
+        <div id="pager2" class="pager"></div>
+    </section>
 
     <!-- Main Blog Content -->
     <div class="nine columns" role="content">
@@ -165,23 +171,33 @@
   <script src="<?php echo base_url() ?>resources/js/foundation.min.js"></script>
   <script src="<?php echo base_url() ?>resources/js/jquery.scrollTo-1.4.2-min.js" type="text/javascript"></script>
   <script src="<?php echo base_url() ?>resources/js/waypoints.min.js" type="text/javascript"></script>
+  <script src="<?php echo base_url() ?>resources/js/jquery.carouFredSel-6.1.0-packed.js" type="text/javascript"></script>
   <script src="<?php echo base_url() ?>resources/js/navbar.js" type="text/javascript"></script>
   
   <!-- Initialize JS Plugins -->
   <script src="<?php echo base_url() ?>resources/js/app.js"></script>
   <script type="text/javascript">
-  $(function() {
-    var bar = $('#headerSlideContainer');
-    var top = bar.css('top');
-    $(window).scroll(function() {
-      if($(this).scrollTop() > 400) {
-        bar.stop().animate({'top' : '-22px'}, 500);
-      } else {
-        bar.stop().animate({'top' : top}, 100);
-      }
-    });
-  });
-</script>
+   $(function(){
+
+    $('#video_slider').carouFredSel({
+          responsive: true,
+          width: '100%',
+          scroll: 1,
+          items: {
+            width: 400,
+          //  height: '30%',  //  optionally resize item-height
+            visible: {
+              min: 1,
+              max: 2
+            }
+          },
+          auto: false,
+          prev: '#prev2',
+          next: '#next2',
+          pagination: "#pager2"
+        });
+   });
+  </script>
   
 </body>
 </html>

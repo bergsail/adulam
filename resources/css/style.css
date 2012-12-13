@@ -12,6 +12,18 @@
 
 body {
   font-family: TrajanProRegular;
+ /* background: url('../images/adulam_background.jpg') no-repeat scroll;
+  background-size: cover;*/
+}
+
+#logo {
+  /*background: url('../images/adulam_logo.jpg') no-repeat;
+  max-width: 100%;
+  height: 300px;*/
+}
+
+#video_slider {
+  /*margin: 0 0.520833% 0 0.520833%;*/
 }
 
 .navigator {
@@ -54,3 +66,29 @@ body {
   text-shadow: 1px 1px 1px #ab7a5a;
   filter: dropshadow(color=#ab7a5a, offx=1, offy=1);
 }
+
+.media-video {
+  background-color: #003471;
+  padding: 5px;
+  width: 45%;
+  float: left;
+}
+
+.media-video iframe {
+  height: 265px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 360px) {
+
+  .media-video iframe {
+    height: 165px;
+    width: 100%;
+  }
+
+}
+

@@ -12,8 +12,27 @@
 
 body {
   font-family: TrajanProRegular;
- /* background: url('../images/adulam_background.jpg') no-repeat scroll;
-  background-size: cover;*/
+  /*color: #fff;*/
+  /*background: url('../images/adulam_background.jpg') no-repeat scroll;*/
+  background: url("../images/adulam_background.jpg") center top fixed;
+  background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: TrajanProRegular;
+  /*color: #fff;*/
+}
+
+p {
+  font-size: 95%;
+}
+
+section {
+  background: url("../images/content_bg.png") repeat-x scroll 0 0 transparent;
+  /*background-color: #6c6c6c;*/
+  margin-bottom: 5px;
+/*  opacity:0.6;
+  filter:alpha(opacity=60);*/
 }
 
 #logo {
@@ -28,7 +47,7 @@ body {
 
 .navigator {
   background-color: #000;
-  width: 100%
+  width: 100%;
 }
 
 .sticky {
@@ -42,6 +61,11 @@ body {
 #main_menu {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.album_info li{
+  font-size: 0.8em;
+  text-decoration: none;
 }
 
 .nav-container nav {
@@ -68,7 +92,6 @@ body {
 }
 
 .media-video {
-  background-color: #003471;
   padding: 5px;
   width: 45%;
   float: left;
@@ -79,11 +102,27 @@ body {
   width: 100%;
 }
 
+.bg {
+  background-color: #ebebeb;
+}
+
 @media only screen and (max-width: 768px) {
 
 }
 
 @media only screen and (max-width: 360px) {
+
+  p {
+    font-size: 90%;
+  } 
+
+  .nav-container nav li {
+    margin: 3px 0.1em 3px 0.1em;
+  }
+
+  .nav-container nav li a {
+    font-size: 1em;
+  }
 
   .media-video iframe {
     height: 165px;

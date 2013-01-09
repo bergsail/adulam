@@ -147,11 +147,28 @@
           <div class="media-video"><iframe src="http://www.youtube.com/embed/rEH03cQBEEM" frameborder="0" allowfullscreen></iframe></div>
         </div>
           
-        <a id="prev2" class="prev" href="#">&lt;</a>
-        <a id="next2" class="next" href="#">&gt;</a>
-        <div id="pager2" class="pager"></div>
+        <a id="prev_video_slider" class="prev" href="#">&lt;</a>
+        <a id="next_video_slider" class="next" href="#">&gt;</a>
+        <div id="paginator_video_slider" class="pager"></div>
     </section>
 
+    <section id="news" class="twelve columns">
+      <h3>News</h3>
+      <div id="news_slider">
+        <div class="images_news"><img src="resources/images/concierto_adulam_2013_01_19.jpg"></div>
+        <div class="images_news"><img src="resources/images/concierto_adulam_2013_02_03.jpg"></div>
+        <div class="images_news"><img src="resources/images/concierto_adulam_2013_01_19.jpg"></div>
+      </div>
+
+      <a id="prev_news_slider" class="prev" href="#">prev</a>
+      <a id="next_news_slider" class="next" href="#">next</a>
+      <div id="paginator_news_slider" class="pager"></div>
+    </section>
+
+    <section id="shop" class="twelve columns">
+      <h3>Shop</h3>
+      <div>product</div>
+    </section>
 
   </div>
 
@@ -186,25 +203,44 @@
   <!-- Initialize JS Plugins -->
   <script src="<?php echo base_url() ?>resources/js/app.js"></script>
   <script type="text/javascript">
-   $(function(){
+  $(function(){
     $('#video_slider').carouFredSel({
-          responsive: true,
-          width: '100%',
-          scroll: 1,
-          items: {
-            width: 400,
-          //  height: '30%',  //  optionally resize item-height
-            visible: {
-              min: 1,
-              max: 2
-            }
-          },
-          auto: false,
-          prev: '#prev2',
-          next: '#next2',
-          pagination: "#pager2"
-        });
-   });
+      responsive: true,
+      width: '100%',
+      scroll: 1,
+      items: {
+        width: 400,
+        //  height: '30%',  //  optionally resize item-height
+        visible: {
+          min: 1,
+          max: 2
+        }
+      },
+      auto: false,
+      prev: '#prev_video_slider',
+      next: '#next_video_slider',
+      pagination: "#paginator_video_slider"
+    });
+
+    $('#news_slider').carouFredSel({
+      responsive: true,
+      width: '100%',
+      scroll: 1,
+      items: {
+        // width: 400,
+        //  height: '30%',  //  optionally resize item-height
+        visible: {
+          min: 1,
+          max: 2
+        }
+      },
+      auto: false,
+      prev: '#prev_news_slider',
+      next: '#next_news_slider',
+      pagination: "#paginator_news_slider"
+    });
+
+  });
   </script>
   
 </body>

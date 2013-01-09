@@ -106,6 +106,19 @@ section {
   background-color: #ebebeb;
 }
 
+/*************************** news **********************************/
+
+.images_news {
+  float: left;
+  text-align: center;
+}
+
+.images_news img{
+  width: 85%;
+}
+
+/*************************** shop **********************************/
+
 @media only screen and (max-width: 768px) {
 
 }

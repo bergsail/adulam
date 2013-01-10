@@ -29,10 +29,19 @@ p {
 
 section {
   background: url("../images/content_bg.png") repeat-x scroll 0 0 transparent;
-  /*background-color: #6c6c6c;*/
-  margin-bottom: 5px;
-/*  opacity:0.6;
-  filter:alpha(opacity=60);*/
+  margin-bottom: 2px;
+  /*border-top: #000 solid 5px;*/
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+section:last-child {
+  margin-bottom: 0px;
+}
+
+section:first-child {
+  -webkit-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px; 
 }
 
 #logo {
@@ -106,6 +115,20 @@ section {
   background-color: #ebebeb;
 }
 
+/*************************** adulam **********************************/
+
+#moretext, #lesstext{
+  cursor: pointer;
+}
+
+#moretext:hover, #lesstext:hover {
+  font-weight: bold;
+}
+
+.active {
+  display: block;
+}
+
 /*************************** news **********************************/
 
 .images_news {
@@ -118,6 +141,37 @@ section {
 }
 
 /*************************** shop **********************************/
+
+
+
+
+/*************************** footer **********************************/
+
+footer {
+  /*background: url("../images/content_bg.png") repeat-x scroll 0 0 transparent;*/
+  background-color: #000;
+  width: 100%;
+  padding-top: 20px;
+  text-shadow: 1px 1px 1px #ab7a5a;
+  filter: dropshadow(color=#ab7a5a, offx=1, offy=1);
+}
+
+/*.footer_box div:first-child a {
+  color: #000;
+}
+*/
+.footer_box div:last-child p{
+  text-align: center;
+  line-height: 5px;
+  color: #fff;
+}
+
+.footer_box div:last-child a {
+  font-size: 10px;
+  color: #fff;
+}
+
+
 
 @media only screen and (max-width: 768px) {
 

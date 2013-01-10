@@ -60,17 +60,19 @@
           <div class="six columns">
             <p>ADULAM es una banda de Heavy Metal - Progresivo de Costa Rica, producto de un relanzamiento de lo que fue la primera producción de la banda como ROB, propuesta del cantante. Por esa época, la banda vió pasar muchos miembros en su alienación para sus presentaciones en vivo donde participó activamente en la escena rock costarricense, logrando posicionar temas como “A todos” y “Serpientes en el paraíso” entre otras, pero sin mayor definición como banda. </p>
             <p>Siempre con la viva intención de avanzar y presentar algo más actual, sin dejar atrás la esencia pero con una visión futurista, a raíz de cambios en la visión general y la necesidad de una nueva expresión musical que reflejara las influencias musicales de cada quién pero como un todo, nace bajo un nuevo nombre toda una filosofía musical siempre basada en las creencias y principios espirituales de la banda, aproximadamente en Octubre del 2010, con una alineación madura y comprometida con la misión de incursionar en nuevos terrenos musicales.</p>
+            <p id="moretext">more...</p>
           </div>
           <div class="six columns">
             <img src="<?php echo base_url() ?>resources/images/adulam_picture_bio.jpg">
           </div>
         </div>
 
-        <div class="row">
+        <div class="row aboutusMore">
           <div class="twelve columns more">
             <p>Desde entonces , Adulam ha participado en festivales y guerras de bandas con muy buenas impresiones de parte del jurado y la audiencia; además de varios conciertos como telonero y banda invitada. </p>
             <p>Musicalmente, y en esta nueva etapa, la banda no se considera un grupo musical purista en el género progresivo, pero ha adoptado las nuevas tendencias del mismo como la progresión natural del nuevo heavy metal claramente impregnado de el género sinfónico, donde cada cual tiene una dramática participación técnica dentro de una temática casi vertiginosa en la composición tanto en la lírica como en el ambiente musical que se persigue. Esto sumado a la savia que alimenta cada una de las intenciones de Adulam (La Biblia, 1 Samuel 22) pretende crear una conciencia menos colectiva, más personal de la vida espiritual y las implicaciones de cada decisión, para crear un pensamiento más libre de prejuicio hacia lo que profesa. </p>
             <p>Hoy día, esta en los pasos finales de la composición de lo que será la primera producción de la banda, gracias a la buena aceptación de “Los que van a morir” y “Epitafio” como premezclas preliminares, manteniendo siempre un estilo vanguardista entre metal sinfónico, progresivo y clásico. Pronto más noticias, saludes desde la cueva...</p>
+            <p id="lesstext">less...</p>
           </div>
         </div>
     </section>
@@ -113,17 +115,11 @@
       </div>
       <div class="four columns album_info">
         <ol>
-          <li>Preludio: Lágrimas rojas</li>
-          <li>A todos</li>
-          <li>Voces</li>
-          <li>Salida</li>
+          <li>Los que van a Morir</li>
+          <li>Entre cielo e infierno</li>
+          <li>Epitafio</li>
           <li>Gúardalos del mal (Juan 17)</li>
-          <li>Pobre ladrón</li>
-          <li>Sublime</li>
-          <li>Credo</li>
-          <li>Fuerza</li>
-          <li>Serpientes en el paraíso</li>
-          <li>Edén</li>
+          <li>Voces</li>
         </ol>
       </div>
       <div class="five columns album_info">
@@ -172,22 +168,18 @@
 
   </div>
 
-  <footer class="row">
+  <footer>
+    <div class="row">
     <div class="twelve columns">
-      <hr />
-      <div class="row">
-        <div class="six columns">
-          <p>&copy; Copyright no one at all. Go to town.</p>
-        </div>
-        <div class="six columns">
-          <ul class="link-list right">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-          </ul>
+      
+      <div class="row footer_box">
+        <div class="twelve columns">
+          <P>Copyright ®2013 www.adulamcueva.com - Derechos Reservados.</P>
+          <p><a href="http://virtualdesignercr.com" target="_blank" >Virtual Designer Costa Rica S.A</a></p>
         </div>
       </div>
+
+    </div>
     </div>
   </footer>
 
@@ -238,6 +230,23 @@
       prev: '#prev_news_slider',
       next: '#next_news_slider',
       pagination: "#paginator_news_slider"
+    });
+
+    $(".aboutusMore").css('display', 'none');
+    $("#lesstext").css('display', 'none');
+
+    $("#moretext").click(function(){
+      $(".aboutusMore").addClass('active');
+      $(".aboutusMore").show();
+      $("#moretext").css('display', 'none');
+      $("#lesstext").css('display', 'block');
+    });
+
+    $("#lesstext").click(function(){
+      $(".aboutusMore").removeClass('active');
+      $(".aboutusMore").hide();
+      $("#lesstext").css('display', 'none');
+      $("#moretext").css('display', 'block');
     });
 
   });
